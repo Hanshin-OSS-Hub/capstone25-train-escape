@@ -38,3 +38,28 @@
 하지만 누군가에게는 문턱이 더 높고, 길이 더 험난합니다.
 와 같은 문구와 함께플레이어가 체험을 통해 공감과 인식의 전환을 얻게 하는 방향으로 마무리 후 꿈에서 깸 .. 
 그 후 플레이어가 많은 걸 깨달음
+
+
+//autism spectrum
+자폐 스펙트럼 장애
+1. 게임 제작 아이디어
+-빛 효과: Bloom, Lens Flare
+-화면 효과: Chromatic Aberration(색 분리), Grain(노이즈), Motion Blur
+-청각 효과: Audio Mixer로 여러 소리 겹치기, 에코/리버브 추가
+-NPC배치 후 NPC와 마주치면 효과가 더욱 커짐
+-반복되는 규칙을 가진 퍼즐을 풀어야 함
+-반복되는 퍼즐을 해결하면 효과가 약해짐
+-여러개의 버튼을 누르는 순서를 기억한 후 순서대로 입력
+-규칙찾기
+2. 참고 사이트
+-https://imex.psu.edu/project/autism-tmi-virtual-reality-experience/?utm_source
+-https://arstechnica.com/gaming/2013/03/auti-sim-lets-you-experience-the-horror-of-sensory-overload/?utm_source
+-https://www.youtube.com/watch?v=1NlsRK8W9Es
+
+//visual impairment
+시각 장애
+-당뇨성 망막증의 시각을 인용
+-UI Canvas에 검은 얼룩 텍스처를 만들어 카메라를 따라다니게 함
+-빛번짐 효과를 사용
+-제한된 시야로 작은 글씨나 숫자를 수집해 다음 객차로 넘어감
+-공중에 움직이는 물체를 마우스 클릭을 통해 수집 후 다음 객차로 넘어감
