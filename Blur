@@ -91,6 +91,8 @@ public class BlurRenderFeature : ScriptableRendererFeature
     }
 }
 
+
+
 // GaussianBlur.shader (Assets/Shaders/GaussianBlur.shader)
 
 Shader "Hidden/Custom/GaussianBlur"
