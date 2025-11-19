@@ -250,7 +250,7 @@ Shader → Custom → SimpleGaussianBlur 선택
 3. 스크립트 만들기
 Project → Assets → Create → C# Script
 이름: SimpleScreenBlur.cs
-내용은 아까 준 SimpleScreenBlur.cs 코드 그대로 붙이기
+SimpleScreenBlur.cs 코드 그대로 붙이기
 
 4. Main Camera에 컴포넌트 추가
 Add Component → SimpleScreenBlur
