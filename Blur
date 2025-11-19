@@ -208,3 +208,26 @@ Blur Shader → 위에서 만든 GaussianBlur 넣기
 
 3) CameraBlurController에서
 UpdateScreenBlur(0~5); 로 블러 강도 제어
+
++ 
+1. Main Camera
+CameraBlurController.cs 붙임
+게임에서 상황에 따라 UpdateScreenBlur(x) 호출
+
+2. Renderer Data(URP Forward Renderer Asset)
+BlurRenderFeature 추가
+Blur Shader 슬롯에 GaussianBlur.shader 넣기
+
+3. 실행하면
+CameraBlurController가 blurAmount를 Shader 전역 값으로 보냄 →
+BlurRenderFeature가 그 값을 읽음 →
+GaussianBlur.shader로 화면을 흐리게 그림.
+
+// 화면 엄청 뭉개기
+UpdateScreenBlur(6f);
+
+// 몽환적인 약한 블러
+UpdateScreenBlur(1.2f);
+
+// 부드럽게 없애기 (코루틴으로 가능)
+UpdateScreenBlur(0f);
