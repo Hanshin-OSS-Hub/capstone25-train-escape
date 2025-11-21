@@ -1,18 +1,22 @@
+// Assets/Scripts/PuzzleObject.cs
 // ChatGPT로 제작
 // 상호작용 오브젝트에 추가
 using UnityEngine;
 
-public class PuzzleObject : MonoBehaviour, IInteractable
+public class PuzzleObject : MonoBehaviour
 {
+    // DOF는 한 번에 0.25 줄이고, UI는 0.1만 줄이기
+    public float dofClarityStep = 0.25f;
+    public float uiClarityStep = 0.25f;
+
     public void Interact(Transform interactor)
     {
-        // 퍼즐 처리 로직...
+        // 퍼즐 처리...
         Debug.Log("퍼즐 상호작용!");
 
-        // 여기서 시야 조금 선명하게
-        ViewBlurController.Instance?.AddClarity(0.15f);
+        if (ViewBlurController.Instance != null)
+        {
+            ViewBlurController.Instance.AddClaritySeparate(dofClarityStep, uiClarityStep);
+        }
     }
-
-    public void OnHoverEnter() { /* 하이라이트 */ }
-    public void OnHoverExit() { /* 하이라이트 해제 */ }
 }
