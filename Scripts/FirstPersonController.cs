@@ -77,7 +77,8 @@ public class FirstPersonController : MonoBehaviour
         Vector3 input = (transform.right * h + transform.forward * v).normalized;
 
         float speed = moveSpeed;
-        if (Input.GetKey(KeyCode.LeftShift))
+
+        if (!isCrouching && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
             speed *= sprintMultiplier;
 
         if (isCrouching)
