@@ -3,7 +3,7 @@
 // 상호작용 오브젝트에 추가
 using UnityEngine;
 
-public class PuzzleObject : MonoBehaviour
+public class PuzzleObject : MonoBehaviour, IInteractable
 {
     // DOF는 한 번에 0.25 줄이고, UI는 0.1만 줄이기
     public float dofClarityStep = 0.25f;
@@ -19,4 +19,8 @@ public class PuzzleObject : MonoBehaviour
             ViewBlurController.Instance.AddClaritySeparate(dofClarityStep, uiClarityStep);
         }
     }
+    
+    public void OnHoverEnter() { }
+    
+    public void OnHoverExit() { }
 }
