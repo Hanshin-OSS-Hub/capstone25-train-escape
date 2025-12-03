@@ -1,6 +1,4 @@
 // Assets/Scripts/FirstPersonController.cs
-// ChatGPT로 제작
-// 플레이어 오브젝트에 추가
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -23,9 +21,11 @@ public class FirstPersonController : MonoBehaviour
     float targetHeight;
 
     [Header("Look")]
-    public float mouseSensitivity = 2.0f; // 수치 ↑ = 더 빠름
+    public float mouseSensitivity = 10.0f; // 수치 ↑ = 더 빠름
     public float minPitch = -80f;
     public float maxPitch = 80f;
+
+    private const string SensKey = "MouseSensitivity";
 
     [Header("Cursor")]
     public bool lockCursor = true;
@@ -47,6 +47,14 @@ public class FirstPersonController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+    }
+
+    void Start()
+    {
+        // 저장된 감도값이 있으면 가져오고, 없으면 지금 Inspector에 적혀 있는 기본값 사용
+        float savedSensitivity = PlayerPrefs.GetFloat(SensKey, mouseSensitivity);
+        mouseSensitivity = savedSensitivity;
+        Debug.Log($"[FPC] Loaded Sensitivity: {mouseSensitivity}");
     }
 
     void Update()
